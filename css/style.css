@@ -1,0 +1,340 @@
+/*general header*/
+.container{
+  width: 90%;
+}
+header{
+  background: #333;
+  padding: 20px 0;
+}
+
+/*open and close*/
+header input , header label{
+  position:absolute;
+  top: 20px;
+  right: 25px;
+}
+header input{
+  display: none;
+}
+header label{
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 20px;
+  cursor: pointer;
+  background: url('../images/open.png') no-repeat;
+  background-size: cover;
+
+}
+header input:checked ~ .nav{
+display: block;
+}
+header input:checked ~ label{
+  display: block;
+  background: url('../images/close.png') no-repeat;
+  background-size: cover;
+}
+/*open and close*/
+
+.header-info{
+  display: flex;
+  justify-content: space-between;
+}
+.header-info a{
+  text-decoration: none;
+  color: white;
+}
+.header-info li{
+  display: block;
+  list-style: none;
+  margin: 10px 30px 0 30px;
+}
+.header-info ul{
+  display: flex;
+}
+.header-info ul#js-show-after-login{
+display: none;
+}
+.header-info .brand{
+  font-size: 25px;
+}
+/*cart shopping icon*/
+.list .icon{
+position: relative;
+}
+.list .icon , .list span{
+  color: white;
+}
+.list span{
+  display: none;
+  width: 20px;
+  height: 20px;
+  background-color: darkgreen;
+  border-radius: 50px;
+  left: 20px;
+  bottom: 10px;
+  position: absolute;
+}
+.list .cart-product{
+position: absolute;
+width: 200px;
+transform: translate(5%,0);
+top: 60px;
+background: #eaeaea;
+padding: 10px 15px;
+display: none;
+}
+.cart-product p{
+  color: black;
+}
+.cart-product .all{
+margin-top: 20px;
+display:block;
+text-align: center;
+padding: 8px;
+background-color: darkgreen;
+cursor: pointer;
+}
+/*.fa-shopping-cart:hover .cart-product{
+opacity: 1;
+}*/
+
+
+/* media for header*/
+@media screen and (min-width:1351px) {
+ header label{
+  display: none;
+  }
+}
+@media screen and (max-width:1350px) {
+
+header .list{
+  width: 100%;
+  float: none;
+  margin-top: 20px;
+  display: none;
+ }
+ header .list li {
+   display: block;
+   text-align: center;
+ }
+}
+/*general form*/
+.sign-in{
+  text-align: center;
+  margin-top: 5%;
+}
+.sign-in h2{
+  font-size: 40px;
+  margin-bottom: 3%;
+}
+.form-item input {
+  background: #f2f2f2;
+  border: 0;
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 16px;
+  width: 100%;
+  outline: 0;
+}
+.form-item .btn{
+  width: 50%;
+}
+
+/*product*/
+.product input{
+margin-top: 30px;
+padding: 10px 20px;
+outline: 0;
+width: 50%;
+border: 1px solid #b5b5b5;
+border-radius: 50px;
+font-size: 18px;
+}
+.product-items{
+margin-top: 4%;
+}
+.product-item{
+  display: flex;
+  margin-bottom: 40px;
+  width: 85%;
+}
+.product-item img{
+  width: 15%;
+  margin-right: 30px;
+}
+.product-item .desc h2{
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: 30px;
+  color: darkgreen;
+}
+.product-item .desc p{
+  line-height: 1.5;
+  margin: 30px 0;
+}
+.product-item .desc span{
+font-size: 20px;
+font-weight: bold;
+}
+.product-item .actions{
+  flex: 1;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product-item .actions .add{
+  margin-left: auto;
+  color: white;
+  border: 0;
+  padding: 10px 20px;
+  font-size: 15px;
+  background-color: darkgreen;
+  width: 50%;
+}
+.product-item .actions i{
+display: block;
+margin-left: auto;
+width: 20px;
+cursor: pointer;
+color: #BF181D;
+}
+@media screen and  (max-width:991px){
+.product-item{
+  display: inline-block;
+}
+.product-item img{
+  width: 35%;
+  margin-bottom: 10px;
+}
+.product-item .actions .add{
+  margin-bottom: 30px;
+}
+.product-item .actions .add{
+  margin-left: auto;
+}
+}
+
+
+
+
+
+/*details page css*/
+.home-content{
+
+}
+.home-content img{
+  margin: 20px 0;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.home-content h2{
+  text-transform: capitalize;
+  color:darkgreen;
+}
+.home-content span{
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+/*+ icon*/
+.product .create{
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background-color: darkgreen;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 50%;
+}
+/*create page css*/
+.create form {
+margin-top: 5%;
+}
+.create form input , .create form select{
+width: 100%;
+height: 50px;
+padding:10px 15px;
+border-radius: 20px;
+background: #f2f2f2;
+border: 0;
+outline: 0;
+font-size:17px ;
+margin-bottom: 20px;
+}
+.create form select{
+width: 40%;
+}
+.create form input#sub{
+  width: 30%;
+  position: relative;
+  left: 380px;
+  margin-top: 15px;
+}
+@media screen and (max-width:991px){
+  .create form input#sub{
+    width: 100%;
+    left: 0;
+  }
+  .create form select{
+  width: 100%;
+  }
+}
+/*edit button*/
+.edit{
+  display: inline-block;
+  width: 140px;
+  margin-top: 10px;
+  border: 0;
+  background: darkgreen;
+  color: white;
+  padding: 10px 15px;
+}
+
+/*profile css*/
+.profile .profile-img{
+width: 200px;
+height:200px;
+border-radius: 50%;
+margin: 10px 0;
+}
+.profile h2{
+  margin-top: 20px;
+}
+.profile p{
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.profile .editprofile-btn{
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  width: 140px;
+  margin-top: 10px;
+  border: 0;
+  background: darkgreen;
+  color: white;
+  padding: 10px 15px;
+}
+/*editprofile*/
+#editprofile-form{
+  margin-top: 5%;
+}
+#editprofile-form input {
+width: 100%;
+height: 50px;
+padding:10px 15px;
+border-radius: 20px;
+background: #f2f2f2;
+border: 0;
+outline: 0;
+font-size:17px ;
+margin-bottom: 20px;
+}
